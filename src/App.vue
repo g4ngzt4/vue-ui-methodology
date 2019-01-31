@@ -1,17 +1,25 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ui-button>Default</ui-button>
+    <ui-button :mods="{ rounded: true }">Rounded</ui-button>
+    <ui-button :mods="{ color: 'red' }" disabled>Red</ui-button>
+    <ui-button :mods="{ color: 'blue' }">Blue</ui-button>
+    <ui-button :mods="{ size: 'small' }">Small</ui-button>
+    <ui-button :mods="{ size: 'small', color: 'red' }">Small red</ui-button>
+    <ui-button :mods="{ rounded: true, size: 'small', color: 'blue' }">Small blue</ui-button>
+    <ui-button :mods="{ size: 'large' }">Large</ui-button>
+    <ui-button :mods="{ size: 'large', color: 'red' }">Large red</ui-button>
+    <ui-button :mods="{ size: 'large', color: 'blue' }">Large blue</ui-button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import UiButton from '@/components/UiButton.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    UiButton
   }
 }
 </script>
